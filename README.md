@@ -1,4 +1,4 @@
-## Hi I am Khambeksha 👋
+## Hi I am Khambeksha!
 
 <!--
 **Khambeksha/Khambeksha** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
