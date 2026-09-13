@@ -1,0 +1,27 @@
+import turtle
+import colorsys
+
+# 1. Set up the screen canvas
+screen = turtle.Screen()
+screen.bgcolor("black")          # Set background color to black
+screen.title("Python Turtle Art Creator")
+
+# 2. Set up the drawing turtle (the "pen")
+artist = turtle.Turtle()
+artist.speed(0)                 # 0 is the fastest speed possible
+artist.width(2)                 # Set pen thickness
+
+# 3. Draw a vibrant multi-colored geometric pattern
+# We use a loop to automatically calculate shifting colors using HSV-to-RGB
+total_lines = 180
+for i in range(total_lines):
+    # Dynamically change colors through the rainbow spectrum
+    hue = i / total_lines
+    rgb = colorsys.hsv_to_rgb(hue, 1.0, 1.0)
+    artist.pencolor(rgb)
+    
+    # Movement logic to create the spiral effect
+    artist.forward(i * 2)       # Move forward further each iteration
+    artist.right(119)           # Angle that builds a star-like structure
+
+# 4. Finish up
