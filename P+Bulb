@@ -1,0 +1,17 @@
+import asyncio
+from pywizlight import wizlight, PilotBuilder
+
+async def main():
+    # Replace with your bulb's local IP address
+    my_bulb = wizlight("192.168.1.15")
+    
+    # Turn the light on
+    await my_bulb.turn_on()
+    
+    # Set color to red, green, blue (RGB: 255, 0, 0 for red) and brightness to 128
+    await my_bulb.update_state(PilotBuilder(rgb=(255, 0, 0), brightness=128))
+    
+    # Turn the light off
+    # await my_bulb.turn_off()
+
+asyncio.run(main())
